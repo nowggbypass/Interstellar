@@ -22,11 +22,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 const routes = [
   { path: '/', file: 'index.html' },
-  { path: '/apps', file: 'apps.html' },
-  { path: '/games', file: 'games.html' },
-  { path: '/settings', file: 'settings.html' },
-  { path: '/tabs', file: 'tabs.html' },
-  { path: '/go', file: 'go.html' },
+  { path: '/home', file: 'index.html' },
 ];
 
 app.get('/edu/*', cors({ origin: false }), async (req, res, next) => {
