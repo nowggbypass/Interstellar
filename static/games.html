@@ -1,65 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="shortcut icon" id="dynamic-favicon" href="favicon.png">
-    <title id="dynamic-title">Classes</title>
-    <script src="./contact/mathematics.js"></script>
-    <script src="./contact/geography.js"></script>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Moon's formation: Scientists say a giant impact blasted the raw material for the moon off the primitive molten Earth and into orbit, forming the moon.">
-    <meta name="keywords" content="Computer Science, Technology, Photography, Nature, Tech Support, Tech Help, Local Tech Support">
-    <link rel="canonical" href="https://www.space.com/topics/moon">
-    <!-- Site Stylesheets -->
-    <link rel="stylesheet" href="/css/m.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- Main Site Scripts -->
-    <script src="/scripts/learning.js"></script>
-    <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
-    <script src="/scripts/enlighten.js"> </script>
-  </head>
-  <body>
-<!-- Nav Bar Start-->
-<div class="fixed-nav-bar">
-  <a class="icon" href="/./"><img id="INImg" src="main.png"></a>
-    <div class="fixed-nav-bar-right">
-         <a class="navbar-link" href="/./games"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>      
-         <a class="navbar-link" href="/./apps"><span class="material-symbols-outlined weird-icon">apps</span>Apps</a>
-         <a class="navbar-link" href="/./tabs"><i class="fa-solid fa-table navbar-icon"></i>Tabs</a>
-         <a class="navbar-link" href="/./settings"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a>
-     </div></div></div></div>
-  <!-- Nav Bar End-->
-    <div class="input-container">
-      <input type="text" id="searchbarbottom" onkeyup="search_game()" placeholder="Search">
-      <select id="category" name="category" onchange="showImages()">
-        <option value="all">All</option>
-        <option value="2P">Multiplayer</option>
-        <option value="sports">Sports</option>
-        <option value="flash">Flash</option>
-        <option value="emu">Emulator</option>
-        <option value="local">Local</option>
-      </select>
-    </div>
-     <div class="pinned-apps">
-    </div>
-    <div class="container-apps">
-    </div>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+<head>
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-WKJQ5QHQTJ');
+<script src="js/xor.js"></script>
+<script src="js/bookmarks.js"></script>
+<script src="/uv/uv.bundle.js"></script>
+<script src="/uv/uv.config.js"></script>
+<script src="/shortcuts.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<html>
+<script src="js/xor.js"></script>
+<script src="js/bookmarks.js"></script>
+<script src="/uv/uv.bundle.js"></script>
+<script src="/uv/uv.config.js"></script>
+<script src="/shortcuts.js"></script>
+
+<body style="background-color: rgb(50, 54, 57);">
+      
+    <title>Flex Scheduling</title>
+    <style>
+        .button {
+            padding: 0px 0px;
+            margin: 5px;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            width: 90px; /* Adjust the width as needed */
+        }
+        .button img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 17px;
+        }
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        #iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 3;
+        }
+        .close-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="button" onclick="location.href=__uv$config.prefix+xor.encode('https://now.gg/play/roblox-corporation/5349/roblox');">
+            <img src="/roblox.png" alt="Roblox">
+                <p1>Roblox - WORKING</p1>
+        </button>
+    </div>
+    <div>
+        <button class="button" onclick="location.href=__uv$config.prefix+xor.encode('https://nowgg.nl/play/roblox-corporation/5349/roblox');">
+            <img src="/roblox.png" alt="Roblox - Not Working">
+                <p1>Roblox - Not Working atm</p1>
+        </button>
+    </div>
+    <div id="overlay">
+        <div id="iframe-container">
+            <div class="close-overlay" onclick="closeIframe()">&times;</div>
+            <iframe id="myIframe" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openIframe(url) {
+            document.getElementById('myIframe').src = url;
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeIframe() {
+            document.getElementById('myIframe').src = '';
+            document.getElementById('overlay').style.display = 'none';
+        }
     </script>
-           <!--- Advertisement Start-->
-           <!-- Advertisement End-->
-    <script src="/scripts/wisdom.js?v=1"></script>
-        <script src="/scripts/edu.js"></script>
-  </body>
+</body>
 </html>
