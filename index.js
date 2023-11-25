@@ -3,11 +3,16 @@ import http from 'node:http';
 import createBareServer from "@tomphttp/bare-server-node";
 import path from 'node:path';
 import cors from 'cors';
+import { fileURLToPath } from "url";
+import { createServer as createHttpsServer } from "node:https";
+import { createServer as createHttpServer } from "node:http";
+import { readFileSync, existsSync } from "node:fs";
+import serveStatic from "serve-static";
 
 const __dirname = process.cwd();
 const server = http.createServer();
 const app = express(server);
-const bareServer = createBareServer('/outerspace/');
+const bareServer = createBareServer('/bare/');
 const PORT = 8080;
 
 app.use(express.json());
@@ -26,7 +31,7 @@ const routes = [
 
 app.get('/edu/*', cors({ origin: false }), async (req, res, next) => {
   try {
-    const reqTarget = `https://raw.githubusercontent.com/InterstellarNetwork/Interstellar-Assets/main/${req.params[0]}`;
+    const reqTarget = `https://raw.githubusercontent.com/Skydiver-Web/Skydiver-Web/main/${req.params[0]}`;
     const asset = await fetch(reqTarget);
     
     if (asset.ok) {
@@ -55,18 +60,21 @@ server.on('request', (req, res) => {
   }
 });
 
-server.on('upgrade', (req, socket, head) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeUpgrade(req, socket, head);
-  } else {
-    socket.end();
-  }
+server.on("upgrade", (req, socket, head) => {
+  if(bare.shouldRoute(req, socket, head)) bare.routeUpgrade(req, socket, head); else socket.end();
 });
+
 
 server.on('listening', () => {
-  console.log(`Running at http://localhost:${PORT}`);
+  const addr = server.address();
+
+  console.log(`Server running on port ${addr.port}`)
+	console.log('');
+  console.log('You can now view it in your browser.')
+  /* Code for listing IPS from website-aio */
+	console.log(`Local: http://${addr.family === 'IPv6' ? `[${addr.address}]` : addr.address}:${addr.port}`);
+	try { console.log(`On Your Network: http://${address.ip()}:${addr.port}`); } catch (err) {/* Can't find LAN interface */};
+	if(process.env.REPL_SLUG && process.env.REPL_OWNER) console.log(`Replit: https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
 });
 
-server.listen({
-  port: PORT,
-});
+server.listen({ port: (process.env.PORT || 8080) })
