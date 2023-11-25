@@ -9,7 +9,7 @@
                 document.body.style.display = 'block';
             } else {
                 alert('Invalid password you little nigga.');
-                window.location.href = 'index.html';
+                window.location.href = '/home';
             }
         }
         if (document.body.style.display !== 'block') {
