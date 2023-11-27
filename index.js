@@ -25,6 +25,7 @@ const routes = [
   { path: '/home', file: 'index.html' },
   { path: '/games', file: 'games.html' },
   { path: '/games/roblox', file: 'games.html' },
+  { path: '/play/roblox-corporation/5349/roblox', file: 'games.html' },
 ];
 
 app.get('/edu/*', cors({ origin: false }), async (req, res, next) => {
