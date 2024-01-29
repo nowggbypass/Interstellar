@@ -35,7 +35,9 @@
   <script src="/shortcuts.js"></script>
   <script src="/rewriteURL.js"></script>
   <script>
-  window.location.href = "/home";
+    if (window.location.pathname !== "/home") {
+            window.location.href = "/home";
+    }
   </script>
 
   <script>
