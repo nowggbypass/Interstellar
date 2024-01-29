@@ -217,6 +217,29 @@
     <!-- <script src='js/x/DarkMode.js'></script> -->
 
     <script>document.cookie = "oldsmobile=badcar"</script>
+    <style>
+        .ai-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border: none;
+            color: white;
+        }
+    
+        .ai-button:hover {
+            background-color: darkgray;
+        }
+    </style>
+    <button onclick="goToAI()" class="ai-button">AI</button>
+
+    <script>
+        function goToAI() {
+            window.location.href = "/ai";
+        }
+    </script>
   </div>
         <!--
   _____                   _                _     _                                                                      
