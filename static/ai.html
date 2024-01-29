@@ -40,6 +40,20 @@
             cursor: pointer;
             z-index: 4;
         }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            border: 2px solid white;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +64,8 @@
         </div>
     </div>
 
+    <button class="button" onclick="goToPage('/home')">Go to Page</button>
+
     <script>
         function openIframe(url) {
             document.getElementById('myIframe').src = url;
@@ -59,6 +75,10 @@
         function closeIframe() {
             document.getElementById('myIframe').src = '';
             document.getElementById('overlay').style.display = 'none';
+        }
+        
+        function goToPage(page) {
+            openIframe(page);
         }
         
         openIframe("https://experimental.3.us-1.fl0.io/uv/service/hvtrs8%2F-dgerak.mre"); // Load the page initially
