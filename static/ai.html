@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Title</title>
+    <title>Iframe Example</title>
    
     <style>
         body {
@@ -40,15 +40,6 @@
             cursor: pointer;
             z-index: 4;
         }
-        .redirect-text {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 32px;
-            color: white;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -58,8 +49,6 @@
             <iframe id="myIframe" width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
-
-    <div class="redirect-text" id="redirectText">Redirecting to home...</div>
 
     <script>
         function openIframe(url) {
@@ -73,21 +62,6 @@
         }
         
         openIframe("https://experimental.3.us-1.fl0.io/uv/service/hvtrs8%2F-dgerak.mre"); // Load the page initially
-        
-        setTimeout(closeIframe, 3000); // Automatically close the iframe after 3 seconds
-        
-        // Optional: Uncomment the code below to show the redirect countdown instead of auto-closing
-        /*
-        let countdown = 3;
-        setInterval(() => {
-            countdown--;
-            if (countdown <= 0) {
-                closeIframe();
-            } else {
-                document.getElementById('redirectText').textContent = `Redirecting to home in ${countdown} seconds...`;
-            }
-        }, 1000);
-        */
     </script>
 </body>
 </html>
