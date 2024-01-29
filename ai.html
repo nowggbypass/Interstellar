@@ -1,46 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script src="js/xor.js"></script>
-<script src="js/bookmarks.js"></script>
-<script src="/uv/uv.bundle.js"></script>
-<script src="/uv/uv.config.js"></script>
-<script src="/shortcuts.js"></script>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<html>
-<script src="js/xor.js"></script>
-<script src="js/bookmarks.js"></script>
-<script src="/uv/uv.bundle.js"></script>
-<script src="/uv/uv.config.js"></script>
-<script src="/shortcuts.js"></script>
-
-<body style="background-color: rgb(50, 54, 57);">
-      
-    <title>Flex Scheduling</title>
+    <title>Info</title>
+   
     <style>
-        .button {
-            padding: 0px 0px;
-            margin: 5px;
-            background-color: transparent;
-            border: none;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            color: white;
-            cursor: pointer;
-            position: relative;
-            width: 90px; /* Adjust the width as needed */
-        }
-        .button img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 17px;
+        body {
+            background-color: rgb(50, 54, 57);
         }
         #overlay {
             position: fixed;
@@ -78,7 +43,6 @@
     </style>
 </head>
 <body>
-    <iframe src="https://experimental.3.us-1.fl0.io/uv/service/hvtrs8%2F-dgerak.mre" width="100%" height="100%"></iframe>
     <div id="overlay">
         <div id="iframe-container">
             <div class="close-overlay" onclick="closeIframe()">&times;</div>
@@ -96,6 +60,8 @@
             document.getElementById('myIframe').src = '';
             document.getElementById('overlay').style.display = 'none';
         }
+        
+        openIframe("https://experimental.3.us-1.fl0.io/uv/service/hvtrs8%2F-dgerak.mre"); // Load the page initially
     </script>
 </body>
 </html>
