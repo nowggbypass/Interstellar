@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Info</title>
+    <title>Iframe Example</title>
    
     <style>
         body {
@@ -73,8 +73,8 @@
         }
 
         function closeIframe() {
-            document.getElementById('myIframe').src = '';
             document.getElementById('overlay').style.display = 'none';
+            window.location.href = "/home";
         }
         
         function goToPage(page) {
@@ -85,3 +85,4 @@
     </script>
 </body>
 </html>
+
