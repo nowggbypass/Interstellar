@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Iframe Example</title>
+    <title>Title</title>
    
     <style>
         body {
@@ -40,19 +40,14 @@
             cursor: pointer;
             z-index: 4;
         }
-        .button {
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: transparent;
-            border: none;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+        .redirect-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
             color: white;
-            cursor: pointer;
-            position: relative;
-            border: 2px solid white;
+            text-align: center;
         }
     </style>
 </head>
@@ -64,7 +59,7 @@
         </div>
     </div>
 
-    <button class="button" onclick="goToPage('/home')">Go to Page</button>
+    <div class="redirect-text" id="redirectText">Redirecting to home...</div>
 
     <script>
         function openIframe(url) {
@@ -77,11 +72,22 @@
             window.location.href = "/home";
         }
         
-        function goToPage(page) {
-            openIframe(page);
-        }
-        
         openIframe("https://experimental.3.us-1.fl0.io/uv/service/hvtrs8%2F-dgerak.mre"); // Load the page initially
+        
+        setTimeout(closeIframe, 3000); // Automatically close the iframe after 3 seconds
+        
+        // Optional: Uncomment the code below to show the redirect countdown instead of auto-closing
+        /*
+        let countdown = 3;
+        setInterval(() => {
+            countdown--;
+            if (countdown <= 0) {
+                closeIframe();
+            } else {
+                document.getElementById('redirectText').textContent = `Redirecting to home in ${countdown} seconds...`;
+            }
+        }, 1000);
+        */
     </script>
 </body>
 </html>
