@@ -16,22 +16,22 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edficiency | Intervention Scheduling Software</title>
+    <title>Skydiver-Web</title>
     <link rel="stylesheet" href="/css/css.css" />
     <style>
     .ai-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 50px;
-      height: 50px;
-      background-color: gray;
-      border: none;
-      color: white;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border: none;
+        color: white;
     }
     
     .ai-button:hover {
-      background-color: darkgray;
+        background-color: darkgray;
     }
     </style>
 </head>
@@ -43,9 +43,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <script src="/uv/uv.config.js"></script>
     <script src="/shortcuts.js"></script>
     <!-- <script src="/js/weather.js"></script> -->
-    <script>
-        // const ip = "<?php echo $_SERVER['HTTP_X_FORWARDED_FOR'] ?>";
-    </script>
+
     <div class="bookmarks"></div>
     <div class="info">
         <div id="weather">
@@ -54,7 +52,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             <h2 id="alerts"></h2> -->
         </div>
     </div>
-    <button onclick="location.href='/ai'">AI</button>
+
+    <button onclick="goToAI()" class="ai-button">AI</button>
+
+    <script>
+        function goToAI() {
+            window.location.href = "/ai";
+        }
+    </script>
 
     <div id="sfcpndnyqmcthurxyleqb7rthfclcb4qwl8"></div>
     <script type="text/javascript"
@@ -104,5 +109,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             </div>
         </div>
     </div>
+
 </body>
 </html>
