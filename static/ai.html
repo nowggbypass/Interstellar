@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="js/xor.js"></script>
+<script src="js/bookmarks.js"></script>
+<script src="/uv/uv.bundle.js"></script>
+<script src="/uv/uv.config.js"></script>
+<script src="/shortcuts.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<html>
+<script src="js/xor.js"></script>
+<script src="js/bookmarks.js"></script>
+<script src="/uv/uv.bundle.js"></script>
+<script src="/uv/uv.config.js"></script>
+<script src="/shortcuts.js"></script>
+
+<body style="background-color: rgb(50, 54, 57);">
+      
+    <title>Flex Scheduling</title>
+    <style>
+        .button {
+            padding: 0px 0px;
+            margin: 5px;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            width: 90px; /* Adjust the width as needed */
+        }
+        .button img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 17px;
+        }
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        #iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 3;
+        }
+        .close-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="button" onclick="location.href=__uv$config.prefix+xor.encode('https://deepai.org');">
+            <img src="/roblox.png" alt="Roblox - Not Working">
+                <p1>deepai.org (best)</p1>
+        </button>
+    </div>
+    <div>
+        <button class="button" onclick="location.href=__uv$config.prefix+xor.encode('https://mathway.com');">
+            <img src="/roblox.png" alt="Roblox - Not Working">
+                <p1>MathAI</p1>
+        </button>
+    </div>
+    <div id="overlay">
+        <div id="iframe-container">
+            <div class="close-overlay" onclick="closeIframe()">&times;</div>
+            <iframe id="myIframe" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openIframe(url) {
+            document.getElementById('myIframe').src = url;
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeIframe() {
+            document.getElementById('myIframe').src = '';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
