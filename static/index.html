@@ -226,7 +226,6 @@
         height: 50px;
         background-color: gray;
         border: 2px solid white;
-        color: white;
         border-radius: 5px;
         display: inline-block;
     }
@@ -234,8 +233,12 @@
     .ai-button:hover {
         background-color: darkgray;
     }
+    
+    .ai-button span {
+        color: white;
+    }
 </style>
-<button onclick="goToAI()" class="ai-button">AI</button>
+<button onclick="goToAI()" class="ai-button"><span>AI</span></button>
 
 <script>
     function goToAI() {
