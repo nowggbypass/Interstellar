@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edficiency | Intervention Scheduling Software</title>
+   
+    <style>
+        body {
+            background-color: rgb(50, 54, 57);
+        }
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        #iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 3;
+        }
+        .close-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <div id="iframe-container">
+            <div class="close-overlay" onclick="closeIframe()">&times;</div>
+            <iframe id="myIframe" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openIframe(url) {
+            document.getElementById('myIframe').src = url;
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeIframe() {
+            document.getElementById('overlay').style.display = 'none';
+            window.location.href = "/internal/newTab/main.html";
+        }
+        
+        openIframe("https://experimental.3.us-1.fl0.io/uv/service/hvtrs8%2F-dgerak.mre"); // Load the page initially
+    </script>
+</body>
+</html>
